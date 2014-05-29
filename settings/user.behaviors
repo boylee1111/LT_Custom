@@ -14,26 +14,47 @@
      ;; all of Light Table here
      :app [(:lt.objs.style/set-skin "dark")
            :lt.plugins.gitlight/config {:git-binary "git"
-                                        :max-history 64}]
+                                        :max-history 64}
+           :lt.plugins.syntaxstatusbar/attach]
 
      ;; The editor tag is applied to all editors
      :editor [:lt.objs.editor/no-wrap
               (:lt.objs.style/set-theme "default")
               :lt.objs.editor/line-numbers
+              :lt.objs.editor.file/remove-trailing-
+              :lt.objs.editor/highlight-current-line
+              :lt.objs.statusbar/show-statusbar
               :lt.plugins.emacs/activate-emacs
-              :lt.objs.editor.file/remove-trailing-whitespace
-              :lt.plugins.opener/add-menu-items]
+              :lt.plugins.opener/add-menu-items
+              :lt.plugins.palette/enable
+              :lt.plugins.trail-wkhitespace/show-trailing-whitespace
+              :lt.plugins.gitstatusbar/watch-editor
+              :lt.plugins.gitstatusbar/attach
+              :lt.plugins.gitstatusbar/workspace
+              :lt.plugins.visible-whitespace/show-whitespace
+              :lt.plugins.match-highlighter/enable
+              :lt.plugins.ctags/simple-jump-to-definition
+              :lt.plugins.watches/watch!
+              :lt.plugins.gitstatusbar/attach
+              (:lt.plugins.reflow/set-width 72)]
 
-     :editor.javascript [:lt.plugins.jshint/on-save]
+     :editor.javascript [:lt.plugins.jshint/on-save
+                         :lt.plugins.tern/javascript-doc]
 
      :editor.html [:lt.plugins.html/eval-on-save]
      :editor.html.live [:lt.plugins.html/on-eval]
 
      :editor.css [:lt.plugins.css/eval-on-save]
+     :editor.css [:lt.plugins.lt-scrubber/activate-scrubber]
 
      ;; Here we can add behaviors to just clojure editors
-     :editor.clojure [(:lt.plugins.clojure/print-length 1000)]}
+     :editor.clojure [(:lt.plugins.clojure/print-length 1000)]
+
+     :tern.config [(:lt.plugins.tern/libs :ecma5)
+                   (:lt.plugins.tern/plugin :node true)]}
 
  ;; You can use the subtract key to remove behavior that may get added by
  ;; another diff
- :- {:app []}}
+ :- {:app []
+
+     :tern.config [:lt.plugins.tern/libs]}}

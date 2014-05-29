@@ -1,0 +1,2 @@
+{:+ {:app [(:lt.objs.plugins/load-js "trailingwhitespace_compiled.js")
+           (:lt.objs.plugins/load-css "css/structure.css")]}}

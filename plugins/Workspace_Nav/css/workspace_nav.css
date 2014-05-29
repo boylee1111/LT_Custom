@@ -1,0 +1,3 @@
+.workspace .nav-selected-focused > .tree-item > p {background: var(result-bg); }
+
+.workspace .nav-selected-unfocused > .tree-item > p {background: var(dark-highlight-bg); }
