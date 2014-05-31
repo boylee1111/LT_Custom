@@ -34,9 +34,13 @@
               "ctrl-x h" [:editor.select-all]
               "alt-shift-s" [:gitlight-status-toggle]
 
+              ;; emacs key mapping related
+
               "alt-f", [:editor.word-right]
               "alt-b", [:editor.word-left]
-              "ctrl-alt-d", [:editor.delete-word-right]
+              "ctrl-v" [:editor.page-down]
+              "alt-v" [:editor.page-up]
+              "ctrl-alt-d" [:editor.delete-word-right]
 
               "ctrl-x 3" [:lt.plugins.bufferize/split-window-right]
               "ctrl-x 0" [:lt.plugins.bufferize/delete-window]
@@ -44,5 +48,4 @@
               "ctrl-x o" [:lt.plugins.bufferize/other-window]
               "ctrl-x ctrl-o" [:lt.plugins.bufferize/send-buffer-next-window]
               "ctrl-x b" [:lt.plugins.bufferize/switch-buffer]
-              "ctrl-x k" [:lt.plugins.bufferize/kill-buffer]
-}}}
+              "ctrl-x k" [:lt.plugins.bufferize/kill-butter]}}}
