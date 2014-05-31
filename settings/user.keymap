@@ -15,19 +15,28 @@
      :editor {"pmeta-[" [:editor.watch.watch-selection]
               "pmeta-]" [:editor.watch.unwatch]
               "pmeta-ctrl-]" [:editor.watch.remove-all]
-              "alt-shift-s" [:gitlight-status-toggle]
-              "pmeta-r" [:show-commandbar-transient]
+
               "pmeta-y" [:toggle-console]
               "pmeta-shift-l" [:clear-console]
+
+              "pmeta-r" [:show-commandbar-transient]
               "pmeta-/" [:toggle-comment-selection]
-              "pmeta-m" [:workspace.show]
+              "pmeta-," [:smart-indent-selection]
+              "ctrl-h k" [:lt.plugins.describe-key/describe-key]
+
               "pmeta-t" [:lt.plugins.opener/reveal-active-item]
+              "pmeta-m" [:workspace.show]
               "pmeta-shift-m" [:lt.plugins.workspace-nav/focus]
+
               "pmeta-ctrl-j" [:editor.jump-to-definition-at-cursor]
               "pmeta-ctrl-shift-j" [:editor.unjump]
-              "ctrl-h k" [:lt.plugins.describe-key/describe-key]
+
               "ctrl-x h" [:editor.select-all]
-              "pmeta-," [:smart-indent-selection]
+              "alt-shift-s" [:gitlight-status-toggle]
+
+              "alt-f", [:editor.word-right]
+              "alt-b", [:editor.word-left]
+              "ctrl-alt-d", [:editor.delete-word-right]
 
               "ctrl-x 3" [:lt.plugins.bufferize/split-window-right]
               "ctrl-x 0" [:lt.plugins.bufferize/delete-window]
