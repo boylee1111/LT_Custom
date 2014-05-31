@@ -38,8 +38,7 @@
               :lt.plugins.gitstatusbar/attach
               (:lt.plugins.reflow/set-width 72)]
 
-     :editor.javascript [:lt.plugins.jshint/on-save
-                         :lt.plugins.tern/javascript-doc]
+     :editor.javascript [:lt.plugins.jshint/on-save]
 
      :editor.html [:lt.plugins.html/eval-on-save]
      :editor.html.live [:lt.plugins.html/on-eval]
@@ -48,10 +47,7 @@
      :editor.css [:lt.plugins.lt-scrubber/activate-scrubber]
 
      ;; Here we can add behaviors to just clojure editors
-     :editor.clojure [(:lt.plugins.clojure/print-length 1000)]
-
-     :tern.config [(:lt.plugins.tern/libs :ecma5)
-                   (:lt.plugins.tern/plugin :node true)]}
+     :editor.clojure [(:lt.plugins.clojure/print-length 1000)]}
 
  ;; You can use the subtract key to remove behavior that may get added by
  ;; another diff
